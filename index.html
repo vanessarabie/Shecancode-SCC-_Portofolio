@@ -7,6 +7,15 @@
     <title>my portofolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/ed094b26e0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('ul').toggleClass('show');
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -23,7 +32,10 @@
                 <li><a href="#portfolio">Portofolio</a></li>
 
             </ul>
+              <label id="icon">
 
+                <i class="fas fa-bars"></i>
+              </label>
         </nav>
 
 
@@ -78,7 +90,7 @@
                         <ul>
                             <li><span>2023 - current</span><br>Shecancode Rwanda under Frontend class of 20k23</li>
                             <li><span>2020 - 2022 </span><br>Web developer at Linux international</li>
-                            <li><span>2019 - 2020</span><br>Progrmmer at NSSR</li>
+                            <li><span>2019 - 2020</span><br>Progrmmer at Amali Tech</li>
                             <li><span>2010 - 2019</span><br>IT at international Grobal </li>
                         </ul>
                     </div>
@@ -146,35 +158,34 @@
             </center>
             <div class="work-list">
                 <div class="work">
-                    <img src="image/comp1.jpg" alt="">
+                    <img src="image/profilecard.jpg" alt="">
                     <div class="layer">
-                        <h3>sociaol media app</h3>
-                        <p>My sites are so resposive where all my work goes on every social media and also being able to
-                            be accessed worldwide </p>
+                        <h3>Profile card</h3>
+                        <p>Either your company or your employees profile cards</p>
 
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="#header"><i class="fa-solid fa-link"></i></a>
 
                     </div>
                 </div>
 
                 <div class="work">
-                    <img src="image/comp2.jpg" alt="">
+                    <img src="image/portfoliocaver.jpg" alt="">
                     <div class="layer">
-                        <h3>Movies and dramma </h3>
-                        <p>We make all sorts of movies and in whatever domain either dramma or commedians </p>
+                        <h3>Portofolio</h3>
+                        <p>I design any portfolios that you desire</p>
 
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="#header"><i class="fa-solid fa-link"></i></a>
 
                     </div>
                 </div>
 
                 <div class="work">
-                    <img src="image/wa.jpg" alt="">
+                    <img src="image/weatherapp.jpg" alt="">
                     <div class="layer">
-                        <h3>Music application</h3>
-                        <p>Bands and music festivals are all that come in our domain</p>
+                        <h3>Weather App</h3>
+                        <p>Connected weatherapps with APIs </p>
 
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="#header"><i class="fa-solid fa-link"></i></a>
 
                     </div>
                 </div>
@@ -201,19 +212,19 @@
 
                     <div class="social-icons">
                         <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
                     </div>
 
-                    <a href="" download class="btn btn2">Download CV</a>
+                    <a href="#" download class="btn btn2">Download CV</a>
                 </div>
 
                 <div class="contact-right">
-                    <form>
+                    <form onsubmit="sendEmail(); reset(); return false;">
                         <input type="text" name="Name" placeholder="Your names please" required>
-                        <input type="email" name="Email" placeholder="Your email please" required>
+                        <input type="poemail" name="Email" placeholder="Your email please" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
@@ -223,29 +234,14 @@
         </div>
 
         <div class="copyright">
-            <p>Copyright © MarirunguVanessaRabie.<i class="fa-solid fa-heart"></i> the designer</p>
+            <p>Copyright © MarirunguVanessaRabie.<i class="fa-solid fa-heart"></i> the programmer</p>
         </div>
     </div>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-    </script>
-
+    <script src="script.js"></script>
+ 
 
 </body>
 
