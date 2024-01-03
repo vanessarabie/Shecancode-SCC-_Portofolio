@@ -1,0 +1,29 @@
+body {
+    font-family: 'Poppins', Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: lightblue;
+}
+
+.container {
+    text-align: center;
+}
+
+.password-container {
+    margin-top: 20px;
+   
+}
+
+#password {
+    width: 300px;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: darkgreen;
+}

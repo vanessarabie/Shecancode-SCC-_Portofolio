@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <script src="https://kit.fontawesome.com/ed094b26e0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="weatherapp.css">
+</head>
+<body>
+    <div class="weather-app">
+        <div class="container">
+          <h3 class="brand">The weather</h3>  
+          <div>
+            <h1 class="temp">16&#176</h1>
+            <div class="city-time">
+                <h1 class="name">London</h1>
+                <small>
+                    <span class="time">06:09</span>
+
+                    <span class="date">
+                        Monday Dec 1
+                    </span>
+                </small>
+            </div>
+            <div class="weather">
+                <img src="sun.jpg" alt="icon" class="icon" width="50" height="50">
+
+                <span class="condition">Cloudy</span>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+            <form id="locationInput">
+                <input type="text" class="search" placeholder="Search location">
+
+                <button type="submit" class="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <ul class="cities">
+                <li class="city">Newyork</li>
+                <li class="city">California</li>
+                <li class="city">Paris</li>
+                <li class="city">Tokyo</li>
+            </ul>
+
+            <ul class="details">
+                <h4>Weather Details</h4>
+                <li>
+                    <span>Cloudy</span>
+                    <span class="cloud">89%</span>
+                </li>
+
+                <li>
+                    <span>Humidity</span>
+                    <span class="humidity">64%</span>
+                </li>
+
+                <li>
+                    <span>Wind</span>
+                    <span class="wind">8km / h</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        const app = document.querySelector('.weather-app');
+        const temp = document.querySelector('.temp');
+        const dateOutput= document.querySelector('.date');
+        const timeOutput = document.querySelector('.time');
+        const conditionOutput = document.querySelector('.condition');
+        const nameoutput = document.querySelector('.name');
+        const icon = document.querySelector('.icon');
+        const CloudOutput = document.querySelector('.cloud');
+        const humidityOutput = document.querySelector('.humidity');
+        const windOutput = document.querySelector('.wind');
+        const form = document.getElementById('.locationInput');
+        const search = document.querySelector('.search');
+        const btn = document.querySelector('.submit');
+        const cities = document.querySelectorAll('.city');
+
+
+        let cityInput ="London";
+
+        cities.forEach((city) => {
+            city.addEventListener('click', (e) =>{
+                cityInput = e.target.innerHTML;
+
+                fetchWeatherData();
+                app.style.opacity = "0";
+            });
+        })
+
+        form.addEventListener('submit', (e) => {
+              if(search.value.length == 0){
+                alert('please type in a city namee');
+              }
+              else{
+                cityInput = search.value;
+
+
+                fetchWeatherData();
+
+                search.value = "";
+                app.style.opacity = "0";
+              } 
+              e.preventDefault();
+        });
+
+        function dayOfTheWeek(day, month, year){
+            const weekday =[
+                "sunday",
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday",
+                "saturday"
+           
+            ];
+            return weekday[new Date(`${day}/${month}/${year}`).getDay()];
+        };
+
+        function fetchWeatherData(){
+            fetch(`http://api.weatherapi.com/v1/current.json?key==${cityInput}`)
+        
+
+
+.then(response => response.json())
+.then(data =>{
+
+    console.log(data);
+
+    temp.innerHTML = data.current.temp_c + "$#176";
+    conditionOutput.innerHTML = data.current.condition.text;
+
+    const date = data.location.localtime;
+    const y = parseInt(date.substr(0, 4));
+    const m = parseInt(date.substr(5, 2));
+    const d = parseInt(date.substr(8, 2));
+    const time = date.substr(11);
+
+
+    dateOutput.innerHTML = `${dayOfTheWeek(d, m, y)} ${d}, ${m}, ${y}`;
+    timeOutput.innerHTML = time;
+
+    nameoutput.innerHTML = data.location.name;
+
+    const iconId = data.current.condition.icon.substr(
+        "//cdn.weatherapi.com/weather/64*64/".length
+    )
+
+});
+        }
+
+        
+    </script>
+    </body>
+</html>

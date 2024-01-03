@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile card</title>
+    <link rel="stylesheet" href="profilecard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ed094b26e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="modal">
+        <img src="rbie.jpg" alt="">
+        <div class="close"></div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="hamburger-menu">
+                    <div class="center"></div>
+                </div>
+
+                <a href="#" class="mail">
+                    <i class="fa fa-envelope"></i>
+                </a>
+
+                <div class="main">
+                    <div class="image">
+                        <div class="hover">
+                           <i class="fa fa-camera fa 2px"></i> 
+                        </div>
+                    </div>
+                    <h3 class="name">Vanessa Rabie Marirungu</h3>
+                    <h3 class="sub-name">@r_vanessaM</h3>
+                </div>
+            </div>
+            <div class="content">
+                <div class="left">
+                    <div class="about-container">
+                      <h3 class="title">About</h3>
+                      <p class="text">your profile is your identity</p>
+                    </div>
+                    <div class="icons-container">
+                        <a href="#" class="icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="icon">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                        <a href="#" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="buttons-wrap">
+                        <div class="follow-wrap">
+                            <a href="#" class="follow">Follow</a>
+                        </div>
+
+                        <div class="share-wrap">
+                                <a href="#" class="share">Share</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div>
+                        <h3 class="number">91</h3>
+                        <h3 class="number-title">Posts</h3>
+                    </div>
+               
+
+                <div>
+                    <h3 class="number">43k</h3>
+                    <h3 class="number-title">Following</h3>
+                </div>
+          
+
+            <div>
+                <h3 class="number">78.9k</h3>
+                <h3 class="number-title">Followers</h3>
+            </div>
+       
+            </div>
+        </div>
+
+        
+    </div>
+  <script>
+    const image = document.querySelector('.image');
+const hover = document.querySelector('.hover');
+const modal = document.querySelector('.modal');
+const close = document.querySelector('.close');
+
+
+function show(){
+
+    hover.classList.add('active');
+    modal.classList.add('show');
+}
+function hide(){
+
+    hover.classList.remove('active');
+    modal.classList.remove('show');
+}
+
+image.addEventListener('click', show);
+close.addEventListener('click', hide);
+  </script>
+</body>
+</html>
