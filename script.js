@@ -36,20 +36,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // for sending messages on the email
-
-
-// function sendEmail(){
-//     Email.send({
-// Host : "smtp.gmail.com",
-// Username : "vanessarabie12@gmail.com",
-// Password : "#",
-// To : 'vanessarabie12@gmail.com',
-// From : document.getElementById("email").value,
-// Subject : "Portfolio messagers",
-// Body : "Name: " + document.getElementById("Name").value +
-//  "<br> Email: " + document.getElementById("Email").value +
-// "<br> Message: " + document.getElementById("Message").value
-// }).then(
-// message => alert("Message sent successfully")
-// );
-// }
