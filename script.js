@@ -35,4 +35,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// for sending messages on the email
+// on scroll effect
+
+
+window.onscroll = function() {
+    if (window.pageYOffset == 0) {
+        document.getElementById("header1").style.backgroundColor = "transparent";
+        let links = document.getElementsByClassName("nav-a");
+        for (let i = 0; i < links.length; i++) {
+            links[i].style.color = "";
+        }
+    } else {
+        document.getElementById("header1").style.backgroundColor = "#484444";
+        let links = document.getElementsByClassName("nav-a");
+        for (let i = 0; i < links.length; i++) {
+            links[i].style.color = "#ff004f";
+        }
+    }
+};

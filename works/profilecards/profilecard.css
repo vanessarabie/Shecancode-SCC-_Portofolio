@@ -8,6 +8,19 @@
 body{
     background: #efefef;
 }
+.btn{
+    background:  linear-gradient(to right, #4facfe 0%, #00f2fe 140%);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    margin: 50px 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+}
 
 .container{
     padding: 20px;
