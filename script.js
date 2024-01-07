@@ -49,7 +49,7 @@ window.onscroll = function() {
         document.getElementById("header1").style.backgroundColor = "#484444";
         let links = document.getElementsByClassName("nav-a");
         for (let i = 0; i < links.length; i++) {
-            links[i].style.color = "#ff004f";
+            links[i].style.color = "#fffff";
         }
     }
 };

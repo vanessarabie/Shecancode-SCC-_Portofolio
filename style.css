@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #575656;
+    background-color: #757373;
     color: #fff;
 
 }
@@ -80,7 +80,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #19d859;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -124,7 +124,7 @@ nav #icon{
 }
 
 .header-text h1 span {
-    color: red;
+    color: #19d859;
 }
 
 
@@ -192,7 +192,7 @@ nav #icon{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #19d859;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -214,7 +214,7 @@ nav #icon{
 }
 
 .tab-contents ul li span {
-    color: #b54;
+    color: #19d859;
     font-size: 14px;
 
 
@@ -280,7 +280,7 @@ nav #icon{
 }
 
 .services-list div:hover {
-    background: #ff004f;
+    background: #19d859;
     transform: translate(-10px);
 
 }
@@ -329,7 +329,7 @@ nav #icon{
 .layer {
     width: 100%;
     height: 0%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #19d859);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -358,7 +358,7 @@ nav #icon{
 
 .layer a {
     margin-top: 20px;
-    color: #ff004f;
+    color: #19d859;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -387,7 +387,7 @@ nav #icon{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #19d859;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -398,7 +398,7 @@ nav #icon{
 }
 
 .btn:hover {
-    background: #ff004f;
+    background: #19d859;
 
 }
 
@@ -420,7 +420,7 @@ nav #icon{
 }
 
 .contact-left p i {
-    color: #ff004f;
+    color: #19d859;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -440,14 +440,15 @@ nav #icon{
 }
 
 .social-icons a:hover {
-    color: #ff004f;
+    color: #19d859;
     transform: translateY(-5px);
 
 }
 
 .btn.btn2 {
     display: inline-block;
-    background: #ff004f;
+    background: #19d859;
+    
 
 }
 
@@ -500,7 +501,29 @@ form .btn2 {
 
 
 .copyright i {
-    color: #ff004f;
+    color: #00ff55;
+}
+
+
+ /* scrollup */
+
+  .end{
+    padding: 20px 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: transparent;
+}
+ 
+.top i{
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 25px;
+    color: #19d859;
+    background: #484444;
+    margin-left: 20%;
 }
 
 @media (max-width: 1048px){
